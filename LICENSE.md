@@ -1,4 +1,4 @@
-Paper inherits its licensing from upstream projects.
+Paper (and our fork) inherits its licensing from upstream projects.
 
 As such, Paper is licensed under the
 [GNU General Public License version 3](licenses/GPL.md); as it inherits it from Spigot,
@@ -14,6 +14,7 @@ The authors listed below have chosen to release their code under that more permi
 [MIT License](licenses/MIT.md). Any contributor who wants their name added below
 should submit a pull request to this project to add their name.
 
+Paper patchers:
 ```text
 Zach Brown <zach.brown@destroystokyo.com>
 Daniel Ennis <aikar@aikar.co>
@@ -32,4 +33,13 @@ BillyGalbreath <blake.galbreath@gmail.com>
 MiniDigger <admin@minidigger.me>
 Brokkonaut <hannos17@gmx.de>
 vemacs <d@nkmem.es>
+```
+
+Patchers of this fork:
+```text
+Kacper Duras <git@kacperduras.pl>
+Bartłomiej Stefański <bstefanskicom@gmail.com>
+Tymoteusz Boba <Tymoteusz.Boba@gmail.com>
+Jakub Wiczkowski <jakubwiczkowsky@gmail.com>
+Libter <libter.pl@gmail.com>
 ```

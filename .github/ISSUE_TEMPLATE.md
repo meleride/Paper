@@ -1,59 +1,18 @@
-**The following are 'hard suggestions': if you have the information
-available to you, you really should put it in the report. Choose one of
-the following templates from below that best fits the issue you wish to
-report.**
+* **I'm submitting a ...**
+  - [ ] bug report
+  - [ ] feature request
+  - [ ] support request
 
-# Performance issue
-___This section should be used for any report regarding performance issues___
+* **Do you want to request a *feature* or report a *bug*?**
 
-###  Timings or Profile link:
-___We ask that all timings/profiles are a link, not a screenshot. Screenshots inhibit our ability to figure out the real
-cause of the issue.___
+* **What is the current behavior?**
 
-### Description of issue:
-___If applicable___
+* **If the current behavior is a bug, please provide the steps to reproduce and if possible a minimal demo of the problem**
 
-### Plugin list:
+* **What is the expected behavior?**
 
-### bukkit.yml, spigot.yml, paper.yml, server.properties
-___Gist/pastebin/hastebin links___
-### Other helpful links
-___The more information we receive, the quicker and more effective we can be at finding the solution to the
-issue.___
+* **What is the motivation / use case for changing the behavior?**
 
-### Paper build number:
-___This can be found by running `/version` on your server. `latest` is not a proper version number; we require the output of `/version` so we can properly track down the issue.___
+* **Please tell us about your environment:**
 
-# Incompatibility (Bug)
-
-### What behaviour is expected:
-___What you expected to see___
-### What behaviour is observed:
-___What you actually saw___
-### Steps/models to reproduce:
-___This may include a build schematic, a video, or detailed instructions to help reconstruct the issue___
-
-### Plugin list:
-___A list of your plugins___
-
-### Paper build number:
-___This can be found by running `/version` on your server. `latest` is not a proper version number; we require the output of `/version` so we can properly track down the issue.___
-
-# Crash, Stacktrace
-
-### Link/paste of stack trace
-
-    You can also simply just use code formatting in markdown!
-___We need all of the stack trace! Do not cut off parts of it.___
-
-### Plugin list:
-___A list of your plugins___
-### Actions to reproduce (if known):
-___This may include a build schematic, a video, or detailed instructions to help reconstruct the issue___
-
-### Paper build number:
-___This can be found by running `/version` on your server. `latest` is not a proper version number; we require the output of `/version` so we can properly track down the issue.___
-
-# Suggestion
-
-___We love suggestions! Suggestions are fairly unstructured, and will be treated as such___
+* **Other information** (e.g. detailed explanation, stacktraces, related issues, suggestions how to fix)
