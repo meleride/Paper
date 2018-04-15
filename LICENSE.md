@@ -42,4 +42,5 @@ Bartłomiej Stefański <bstefanskicom@gmail.com>
 Tymoteusz Boba <Tymoteusz.Boba@gmail.com>
 Jakub Wiczkowski <jakubwiczkowsky@gmail.com>
 Libter <libter.pl@gmail.com>
+Patryk <xlinux3@gmail.com>
 ```
