@@ -1,4 +1,4 @@
-From cc4dbb1de0f22f088fbe86a6323b98dbc3227ef3 Mon Sep 17 00:00:00 2001
+From 7abeeed0e233541871c4c426d274e81209d48106 Mon Sep 17 00:00:00 2001
 From: kashike <kashike@vq.lc>
 Date: Thu, 17 Aug 2017 16:08:20 -0700
 Subject: [PATCH] Allow specifying a custom "authentication servers down" kick
@@ -6,7 +6,7 @@ Subject: [PATCH] Allow specifying a custom "authentication servers down" kick
 
 
 diff --git a/src/main/java/com/destroystokyo/paper/PaperConfig.java b/src/main/java/com/destroystokyo/paper/PaperConfig.java
-index dbafef02..ec89ecfc 100644
+index dbafef0..ec89ecf 100644
 --- a/src/main/java/com/destroystokyo/paper/PaperConfig.java
 +++ b/src/main/java/com/destroystokyo/paper/PaperConfig.java
 @@ -1,5 +1,6 @@
@@ -27,7 +27,7 @@ index dbafef02..ec89ecfc 100644
 +    }
  }
 diff --git a/src/main/java/net/minecraft/server/LoginListener.java b/src/main/java/net/minecraft/server/LoginListener.java
-index c5434e6b..75df9283 100644
+index c5434e6..75df928 100644
 --- a/src/main/java/net/minecraft/server/LoginListener.java
 +++ b/src/main/java/net/minecraft/server/LoginListener.java
 @@ -250,6 +250,10 @@ public class LoginListener implements PacketLoginInListener, ITickable {
@@ -42,5 +42,5 @@ index c5434e6b..75df9283 100644
                              LoginListener.c.error("Couldn\'t verify username because servers are unavailable");
                          }
 -- 
-2.14.3
+2.7.4
 

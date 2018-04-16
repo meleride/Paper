@@ -1,11 +1,11 @@
-From 7c7a7574d99c36e181f1041526437d2b1ec901af Mon Sep 17 00:00:00 2001
+From c7897f19c5f21c45c5fa40bd69a3d4d938e95d7b Mon Sep 17 00:00:00 2001
 From: Martin Panzer <postremus1996@googlemail.com>
 Date: Sat, 28 May 2016 16:54:03 +0200
 Subject: [PATCH] Add server-name parameter
 
 
 diff --git a/src/main/java/org/bukkit/craftbukkit/Main.java b/src/main/java/org/bukkit/craftbukkit/Main.java
-index e3667e558..ec9508e90 100644
+index e3667e5..ec9508e 100644
 --- a/src/main/java/org/bukkit/craftbukkit/Main.java
 +++ b/src/main/java/org/bukkit/craftbukkit/Main.java
 @@ -134,6 +134,14 @@ public class Main {
@@ -24,5 +24,5 @@ index e3667e558..ec9508e90 100644
          };
  
 -- 
-2.16.1
+2.7.4
 

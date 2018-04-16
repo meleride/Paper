@@ -1,4 +1,4 @@
-From 270a57e64ae5f5a383b35a424dab9a45aa781eaf Mon Sep 17 00:00:00 2001
+From 276fcfc54f0d508aa27dff1b0826fc0755687627 Mon Sep 17 00:00:00 2001
 From: crast <contact@jamescrasta.com>
 Date: Sat, 1 Jun 2013 13:52:30 -0600
 Subject: [PATCH] Reduce thread synchronization in MetadataStoreBase
@@ -101,5 +101,5 @@ index 093c144..64c0f0a 100644
          for (Map<Plugin, MetadataValue> values : metadataMap.values()) {
              if (values.containsKey(owningPlugin)) {
 -- 
-2.9.2.windows.1
+2.7.4
 

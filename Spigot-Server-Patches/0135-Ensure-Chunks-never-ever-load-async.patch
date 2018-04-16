@@ -1,4 +1,4 @@
-From 48b70d5e4a6b5cc7470d2bd282eaa54cae5c4af6 Mon Sep 17 00:00:00 2001
+From 7b36f4ccad7010614009b8beabe978c0ff1ec802 Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Fri, 27 May 2016 21:41:26 -0400
 Subject: [PATCH] Ensure Chunks never ever load async
@@ -6,7 +6,7 @@ Subject: [PATCH] Ensure Chunks never ever load async
 Safely pushes the operation to main thread, then back to the posting thread
 
 diff --git a/src/main/java/org/bukkit/craftbukkit/chunkio/ChunkIOExecutor.java b/src/main/java/org/bukkit/craftbukkit/chunkio/ChunkIOExecutor.java
-index 7b7a3d01b..9aaca21a7 100644
+index 7b7a3d0..9aaca21 100644
 --- a/src/main/java/org/bukkit/craftbukkit/chunkio/ChunkIOExecutor.java
 +++ b/src/main/java/org/bukkit/craftbukkit/chunkio/ChunkIOExecutor.java
 @@ -4,6 +4,7 @@ import com.destroystokyo.paper.PaperConfig;
@@ -27,7 +27,7 @@ index 7b7a3d01b..9aaca21a7 100644
  
      public static void queueChunkLoad(World world, ChunkRegionLoader loader, ChunkProviderServer provider, int x, int z, Runnable runnable) {
 diff --git a/src/main/java/org/bukkit/craftbukkit/chunkio/ChunkIOProvider.java b/src/main/java/org/bukkit/craftbukkit/chunkio/ChunkIOProvider.java
-index b5efb9c3f..ef9529add 100644
+index b5efb9c..ef9529a 100644
 --- a/src/main/java/org/bukkit/craftbukkit/chunkio/ChunkIOProvider.java
 +++ b/src/main/java/org/bukkit/craftbukkit/chunkio/ChunkIOProvider.java
 @@ -35,8 +35,8 @@ class ChunkIOProvider implements AsynchronousExecutor.CallBackProvider<QueuedChu
@@ -42,5 +42,5 @@ index b5efb9c3f..ef9529add 100644
              return;
          }
 -- 
-2.16.1
+2.7.4
 

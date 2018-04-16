@@ -1,4 +1,4 @@
-From 0721e7d031b98d56a0271d84de6e6dcddc6eaef8 Mon Sep 17 00:00:00 2001
+From 323d27868378951c512ea25b0ebac186d190d1bc Mon Sep 17 00:00:00 2001
 From: Martin Panzer <postremus1996@googlemail.com>
 Date: Mon, 23 May 2016 12:12:37 +0200
 Subject: [PATCH] Faster redstone torch rapid clock removal
@@ -6,7 +6,7 @@ Subject: [PATCH] Faster redstone torch rapid clock removal
 Only resize the the redstone torch list once, since resizing arrays / lists is costly
 
 diff --git a/src/main/java/net/minecraft/server/BlockRedstoneTorch.java b/src/main/java/net/minecraft/server/BlockRedstoneTorch.java
-index 5b0028a78..429f26ed5 100644
+index 5b0028a..429f26e 100644
 --- a/src/main/java/net/minecraft/server/BlockRedstoneTorch.java
 +++ b/src/main/java/net/minecraft/server/BlockRedstoneTorch.java
 @@ -94,9 +94,17 @@ public class BlockRedstoneTorch extends BlockTorch {
@@ -39,5 +39,5 @@ index 5b0028a78..429f26ed5 100644
          public RedstoneUpdateInfo(BlockPosition blockposition, long i) {
              this.a = blockposition;
 -- 
-2.16.1
+2.7.4
 

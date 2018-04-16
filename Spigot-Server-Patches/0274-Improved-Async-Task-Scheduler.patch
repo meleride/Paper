@@ -1,4 +1,4 @@
-From ce10f29e40b9ccb5989ca1c901e6f7644c806553 Mon Sep 17 00:00:00 2001
+From 1ef902dd524bc848d7ddae6eebd75ff36ae9071e Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Fri, 16 Mar 2018 22:59:43 -0400
 Subject: [PATCH] Improved Async Task Scheduler
@@ -32,7 +32,7 @@ operations are decoupled from the sync tasks queue.
 
 diff --git a/src/main/java/org/bukkit/craftbukkit/scheduler/CraftAsyncScheduler.java b/src/main/java/org/bukkit/craftbukkit/scheduler/CraftAsyncScheduler.java
 new file mode 100644
-index 00000000..eaf86928
+index 0000000..eaf8692
 --- /dev/null
 +++ b/src/main/java/org/bukkit/craftbukkit/scheduler/CraftAsyncScheduler.java
 @@ -0,0 +1,127 @@
@@ -164,7 +164,7 @@ index 00000000..eaf86928
 +    }
 +}
 diff --git a/src/main/java/org/bukkit/craftbukkit/scheduler/CraftScheduler.java b/src/main/java/org/bukkit/craftbukkit/scheduler/CraftScheduler.java
-index cc4a256c..5d0d26e1 100644
+index cc4a256..5d0d26e 100644
 --- a/src/main/java/org/bukkit/craftbukkit/scheduler/CraftScheduler.java
 +++ b/src/main/java/org/bukkit/craftbukkit/scheduler/CraftScheduler.java
 @@ -15,7 +15,6 @@ import java.util.concurrent.atomic.AtomicReference;
@@ -383,5 +383,5 @@ index cc4a256c..5d0d26e1 100644
  
      private boolean isReady(final int currentTick) {
 -- 
-2.14.3
+2.7.4
 

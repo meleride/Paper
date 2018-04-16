@@ -1,11 +1,11 @@
-From 2f82d8aafd582feb742b94a70af97a109ee7ae34 Mon Sep 17 00:00:00 2001
+From 9b7c01d65c44c61dd6d9d8d7b400c538bfebc342 Mon Sep 17 00:00:00 2001
 From: Zach Brown <zach.brown@destroystokyo.com>
 Date: Sat, 14 Jan 2017 01:22:07 -0600
 Subject: [PATCH] Assign the World in WorldGenStronghold
 
 
 diff --git a/src/main/java/net/minecraft/server/WorldGenStronghold.java b/src/main/java/net/minecraft/server/WorldGenStronghold.java
-index c93754704..a3b958e01 100644
+index c937547..a3b958e 100644
 --- a/src/main/java/net/minecraft/server/WorldGenStronghold.java
 +++ b/src/main/java/net/minecraft/server/WorldGenStronghold.java
 @@ -56,6 +56,7 @@ public class WorldGenStronghold extends StructureGenerator {
@@ -17,5 +17,5 @@ index c93754704..a3b958e01 100644
              this.c();
              this.b = true;
 -- 
-2.16.1
+2.7.4
 

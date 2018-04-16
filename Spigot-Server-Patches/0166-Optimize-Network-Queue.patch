@@ -1,11 +1,11 @@
-From fd37f4274286d7803935867537a4dd26f0859c25 Mon Sep 17 00:00:00 2001
+From 036285c599173cafa55f6409498ea7632dcc3187 Mon Sep 17 00:00:00 2001
 From: vemacs <d@nkmem.es>
 Date: Wed, 23 Nov 2016 12:54:56 -0500
 Subject: [PATCH] Optimize Network Queue
 
 
 diff --git a/src/main/java/net/minecraft/server/MinecraftServer.java b/src/main/java/net/minecraft/server/MinecraftServer.java
-index 5c09c6ff7..13c6b5ccd 100644
+index 5c09c6f..13c6b5c 100644
 --- a/src/main/java/net/minecraft/server/MinecraftServer.java
 +++ b/src/main/java/net/minecraft/server/MinecraftServer.java
 @@ -104,7 +104,7 @@ public abstract class MinecraftServer implements ICommandListener, Runnable, IAs
@@ -18,5 +18,5 @@ index 5c09c6ff7..13c6b5ccd 100644
      private long ab = aw();
  
 -- 
-2.16.1
+2.7.4
 
