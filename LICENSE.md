@@ -33,6 +33,7 @@ BillyGalbreath <blake.galbreath@gmail.com>
 MiniDigger <admin@minidigger.me>
 Brokkonaut <hannos17@gmx.de>
 vemacs <d@nkmem.es>
+stonar96 <minecraft.stonar96@gmail.com>
 ```
 
 Patchers of this fork:
