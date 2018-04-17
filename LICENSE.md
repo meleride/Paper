@@ -37,7 +37,7 @@ vemacs <d@nkmem.es>
 
 Patchers of this fork:
 ```text
-Kacper Duras <git@kacperduras.pl>
+Kacper Duras (aka kacperduras) <git@kacperduras.pl>
 Bartłomiej Stefański <bstefanskicom@gmail.com>
 Tymoteusz Boba <Tymoteusz.Boba@gmail.com>
 Jakub Wiczkowski <jakubwiczkowsky@gmail.com>
