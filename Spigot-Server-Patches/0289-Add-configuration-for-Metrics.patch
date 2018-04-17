@@ -1,0 +1,28 @@
+From 08d89072004e3130620a7f81c38c5610c4ea2b00 Mon Sep 17 00:00:00 2001
+From: kacperduras <git@kacperduras.pl>
+Date: Mon, 16 Apr 2018 17:24:40 +0200
+Subject: [PATCH] Add configuration for Metrics
+
+
+diff --git a/src/main/java/com/destroystokyo/paper/PaperConfig.java b/src/main/java/com/destroystokyo/paper/PaperConfig.java
+index b602bbf..25e7747 100644
+--- a/src/main/java/com/destroystokyo/paper/PaperConfig.java
++++ b/src/main/java/com/destroystokyo/paper/PaperConfig.java
+@@ -78,10 +78,13 @@ public class PaperConfig {
+             MinecraftServer.getServer().server.getCommandMap().register(entry.getKey(), "Paper", entry.getValue());
+         }
+ 
+-        if (!metricsStarted) {
++        // Paper start - Meleride fork, issue: GH-2
++        boolean metricsEnabled = getBoolean("metrics.enabled", false);
++        if (!metricsStarted && metricsEnabled) {
+             Metrics.PaperMetrics.startMetrics();
+             metricsStarted = true;
+         }
++        // Paper end - Meleride fork, issue: GH-2
+     }
+ 
+     static void readConfig(Class<?> clazz, Object instance) {
+-- 
+2.7.4
+

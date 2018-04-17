@@ -1,4 +1,4 @@
-From 79ca517dfc368927a111b63fcfdc81c5a4d03814 Mon Sep 17 00:00:00 2001
+From 8ce7d5eec33a90696982b299b5a06ac5149e8d35 Mon Sep 17 00:00:00 2001
 From: Aikar <aikar@aikar.co>
 Date: Sun, 17 Apr 2016 17:27:09 -0400
 Subject: [PATCH] Prevent Fire from loading chunks
@@ -7,7 +7,7 @@ This causes the nether to spam unload/reload chunks, plus overall
 bad behavior.
 
 diff --git a/src/main/java/net/minecraft/server/BlockFire.java b/src/main/java/net/minecraft/server/BlockFire.java
-index a3a5c853..6832a19a 100644
+index a3a5c85..6832a19 100644
 --- a/src/main/java/net/minecraft/server/BlockFire.java
 +++ b/src/main/java/net/minecraft/server/BlockFire.java
 @@ -164,6 +164,7 @@ public class BlockFire extends Block {
@@ -43,5 +43,5 @@ index a3a5c853..6832a19a 100644
              }
  
 -- 
-2.14.3
+2.7.4
 

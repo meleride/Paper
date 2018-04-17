@@ -1,11 +1,11 @@
-From 90aefd7cfcae77d4aead8571213f172eacd51e5e Mon Sep 17 00:00:00 2001
+From 47c225b5ba8227f32933c28820b72e5564318a3f Mon Sep 17 00:00:00 2001
 From: Zach Brown <zach.brown@destroystokyo.com>
 Date: Thu, 28 Jul 2016 17:58:53 -0500
 Subject: [PATCH] More informative vehicle moved wrongly message
 
 
 diff --git a/src/main/java/net/minecraft/server/PlayerConnection.java b/src/main/java/net/minecraft/server/PlayerConnection.java
-index 187e59a08..98cb84409 100644
+index 9eb7b01..e66584d 100644
 --- a/src/main/java/net/minecraft/server/PlayerConnection.java
 +++ b/src/main/java/net/minecraft/server/PlayerConnection.java
 @@ -357,7 +357,7 @@ public class PlayerConnection implements PacketListenerPlayIn, ITickable {
@@ -18,5 +18,5 @@ index 187e59a08..98cb84409 100644
  
                  entity.setLocation(d3, d4, d5, f, f1);
 -- 
-2.16.1
+2.7.4
 
