@@ -1,4 +1,4 @@
-From 138b8d9ad24d25d198ec0904bc556ebdea9cdd36 Mon Sep 17 00:00:00 2001
+From 8649bf9457cdabede2788d77806bbc58e733b80c Mon Sep 17 00:00:00 2001
 From: killme <killme-git@ibts.me>
 Date: Sun, 12 Nov 2017 19:40:01 +0100
 Subject: [PATCH] Prevent logins from being processed when the player has
@@ -6,7 +6,7 @@ Subject: [PATCH] Prevent logins from being processed when the player has
 
 
 diff --git a/src/main/java/net/minecraft/server/LoginListener.java b/src/main/java/net/minecraft/server/LoginListener.java
-index 75df9283..eaac25dc 100644
+index 75df928..eaac25d 100644
 --- a/src/main/java/net/minecraft/server/LoginListener.java
 +++ b/src/main/java/net/minecraft/server/LoginListener.java
 @@ -60,7 +60,11 @@ public class LoginListener implements PacketLoginInListener, ITickable {
@@ -23,5 +23,5 @@ index 75df9283..eaac25dc 100644
              EntityPlayer entityplayer = this.server.getPlayerList().a(this.i.getId());
  
 -- 
-2.14.3
+2.7.4
 
