@@ -11,6 +11,6 @@
 
 * **If the issue is a feature request, what is the motivation for add the behavior?**
 
-* **Please tell us about your environment:**
+* **If the issue is a bug report, please tell us about your environment:**
 
 * **Other information** (e.g. detailed explanation, stacktraces, related issues, suggestions how to fix)
