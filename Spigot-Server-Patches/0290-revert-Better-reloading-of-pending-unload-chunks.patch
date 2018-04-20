@@ -1,16 +1,14 @@
-From f7eea67c0f0d721d72f84c1f3ef068bcbd356a13 Mon Sep 17 00:00:00 2001
+From 646201cc8906ae473235f5debaf1e585cf84c3d9 Mon Sep 17 00:00:00 2001
 From: Shane Freeder <theboyetronic@gmail.com>
 Date: Sun, 8 Apr 2018 01:21:23 +0100
 Subject: [PATCH] revert "Better reloading of pending unload chunks"
 
-This change by spigot ensures that many interactins with chunks,
-e.g. getting a list of TEs will cause the chunk to be marked for not
-unloading and will block their unload. This is especially true for
-servers using Timings (it needs to access the TE list of chunks), or
-any plugins which need to access entity/TE lists periodically.
+many areas of NMS calls through to this method which means that
+the server can easilly keep chunks loaded in certain conditions
+even when they're no longer needed.
 
 diff --git a/src/main/java/net/minecraft/server/ChunkProviderServer.java b/src/main/java/net/minecraft/server/ChunkProviderServer.java
-index de859ffd1..1e84afb0a 100644
+index 55dada668..2ed3fc40b 100644
 --- a/src/main/java/net/minecraft/server/ChunkProviderServer.java
 +++ b/src/main/java/net/minecraft/server/ChunkProviderServer.java
 @@ -148,7 +148,7 @@ public class ChunkProviderServer implements IChunkProvider {
