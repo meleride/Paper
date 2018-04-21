@@ -1,0 +1,101 @@
+From 945c1173c2f6792fc83270e1c6f2ce21aa5df40d Mon Sep 17 00:00:00 2001
+From: kacperduras <git@kacperduras.pl>
+Date: Sat, 21 Apr 2018 00:36:27 +0200
+Subject: [PATCH] Implement MelerideCommands
+
+
+diff --git a/pom.xml b/pom.xml
+index 45145c5..ca3d07e 100644
+--- a/pom.xml
++++ b/pom.xml
+@@ -52,6 +52,12 @@
+             <id>sonatype</id>
+             <url>https://oss.sonatype.org/content/groups/public/</url>
+         </repository>
++        <!-- Paper start - Meleride fork, issue: GH-4 -->
++        <repository>
++            <id>jitpack.io</id>
++            <url>https://jitpack.io</url>
++        </repository>
++        <!-- Paper end - Meleride fork, issue: GH-4 -->
+     </repositories>
+
+     <dependencies>
+@@ -149,6 +155,13 @@
+             <artifactId>asm-all</artifactId>
+             <version>5.0.4</version>
+         </dependency>
++        <!-- Paper start - Meleride fork, issue: GH-4 -->
++        <dependency>
++            <groupId>com.github.meleride</groupId>
++            <artifactId>MelerideCommands</artifactId>
++            <version>1.0.0</version>
++        </dependency>
++        <!-- Paper end - Meleride fork, issue: GH-4 -->
+     </dependencies>
+
+     <build>
+diff --git a/src/main/java/org/bukkit/plugin/java/JavaPlugin.java b/src/main/java/org/bukkit/plugin/java/JavaPlugin.java
+index 93fa349..8df9239 100644
+--- a/src/main/java/org/bukkit/plugin/java/JavaPlugin.java
++++ b/src/main/java/org/bukkit/plugin/java/JavaPlugin.java
+@@ -35,6 +35,8 @@ import org.bukkit.plugin.PluginLogger;
+ import com.google.common.base.Charsets;
+ import com.google.common.base.Preconditions;
+ import com.google.common.io.ByteStreams;
++import pl.meleride.commands.Commands;
++import pl.meleride.commands.bukkit.BukkitCommands;
+
+ /**
+  * Represents a Java plugin
+@@ -52,6 +54,10 @@ public abstract class JavaPlugin extends PluginBase {
+     private File configFile = null;
+     Logger logger = null; // Paper - PluginLogger -> Logger, package-private
+
++    // Paper start - Meleride fork, issue: GH-4
++    private Commands commands;
++    // Paper end - Meleride fork, issue: GH-4
++
+     public JavaPlugin() {
+         final ClassLoader classLoader = this.getClass().getClassLoader();
+         if (!(classLoader instanceof PluginClassLoader)) {
+@@ -261,6 +267,11 @@ public abstract class JavaPlugin extends PluginBase {
+             isEnabled = enabled;
+
+             if (isEnabled) {
++                // Paper start - Meleride fork, issue: GH-4
++                if (commands == null) {
++                    commands = new BukkitCommands(this);
++                }
++                // Paper end - Meleride fork, issue: GH-4
+                 onEnable();
+             } else {
+                 onDisable();
+@@ -307,7 +318,11 @@ public abstract class JavaPlugin extends PluginBase {
+      *
+      * @param name name or alias of the command
+      * @return the plugin command if found, otherwise null
++     * @deprecated use {@link #getCommands()}
+      */
++    // Paper start - Meleride fork, issue: GH-4
++    @Deprecated
++    // Paper end - Meleride fork, issue: GH-4
+     public PluginCommand getCommand(String name) {
+         String alias = name.toLowerCase(java.util.Locale.ENGLISH);
+         PluginCommand command = getServer().getPluginCommand(alias);
+@@ -323,6 +338,12 @@ public abstract class JavaPlugin extends PluginBase {
+         }
+     }
+
++    // Paper start - Meleride fork, issue: GH-4
++    public Commands getCommands() {
++        return commands;
++    }
++    // Paper end - Meleride fork, issue: GH-4
++
+     @Override
+     public void onLoad() {}
+
+--
+2.7.4
+
